@@ -21,8 +21,8 @@ I = m*L**2 / 12
 
 # Cria uma especificação de ambiente usando o método gym.spec()
 ###########         ambeintes        ###########
-spec = gym.spec('gym_env/InvertedPendulum-v22')
-# spec = gym.spec('gym_env/Elevator-v29')
+# spec = gym.spec('gym_env/InvertedPendulum-v22')
+spec = gym.spec('gym_env/Elevator-v29')
 
 ##########################################
 
@@ -64,8 +64,8 @@ while True:
     env.render()
     if env.finish:
         break
-    # acao = g/(M+m) - K[0]*(sensores[0] - env.xRef) - K[1]*sensores[1]
-    acao = funcao_controle_3(sensores)
+    acao = g/(M+m) - K[0]*(sensores[0] - env.xRef) - K[1]*sensores[1]
+    # acao = funcao_controle_3(sensores)
     print(acao)
     ang_old = sensores[2]
     pos_old = sensores[0] 

@@ -148,7 +148,7 @@ class Elevator(gym.Env):
         xElevator = self.window_size_height - int(self._agent_location[0] * 100/3) - 2*self.elevatorHeight
         
         # Get position for counter-weight.
-        xCounterWeight = self.window_size_width - int((22 - self._agent_location[0])*100/3) + self.baseLine + 2*self.counterWeightHeight
+        xCounterWeight = self.window_size_width - int((22 - self._agent_location[0])*100/1.4) + self.baseLine + 2*self.counterWeightHeight
         
         # Display objects.
         pygame.draw.line(canvas, 'Green', (0, int(self.window_size_height - (self.baseLine + self.xRef * 100/3))), (self.window_size_width, int(self.window_size_height - (self.baseLine + self.xRef * 100/3))), width = 2)
